@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brealls Resorts Booking System</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="booking-header" id="home">
+    <div class="topbar">
+      <div class="brand">Brealls Resorts</div>
+
+      <nav class="main-nav">
+        <a href="#home">Home</a>
+        <a href="#lodges">Lodge & Cottages</a>
+        <a href="#book-now">Book Now</a>
+        <a href="#contact">Contact</a>
+        <a href="#admin-login" class="admin-link">Admin</a>
+      </nav>
+    </div>
+
+    <div class="hero-banner">
+      <div class="hero-overlay">
+        <p class="hero-subtitle">Resort booking made easy</p>
+        <h1>Find your perfect lodge or cottage stay</h1>
+        <p class="hero-description">
+          Browse available accommodations, check prices, and reserve your stay at Brealls Resorts.
+        </p>
+
+        <div class="search-bar">
+          <input type="text" placeholder="Where are you going?" />
+          <input type="date" />
+          <input type="date" />
+
+          <select>
+            <option>2 adults · 1 room</option>
+            <option>2 adults · 2 rooms</option>
+            <option>4 adults · 2 rooms</option>
+            <option>Family stay</option>
+          </select>
+
+          <button onclick="scrollToListings()">Search</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-container">
+    <section class="listings-section" id="lodges">
+      <aside class="filters-panel">
+        <h3>Filter by:</h3>
+
+        <div class="filter-group">
+          <h4>Accommodation Type</h4>
+          <label><input type="checkbox" checked /> Lodge</label>
+          <label><input type="checkbox" checked /> Cottage</label>
+        </div>
+
+        <div class="filter-group">
+          <h4>Capacity</h4>
+          <label><input type="checkbox" /> 2 guests</label>
+          <label><input type="checkbox" /> 4 guests</label>
+          <label><input type="checkbox" /> 6 guests</label>
+        </div>
+
+        <div class="filter-group">
+          <h4>Price Range</h4>
+          <label><input type="checkbox" /> ₱1,000 - ₱2,000</label>
+          <label><input type="checkbox" /> ₱2,001 - ₱3,500</label>
+          <label><input type="checkbox" /> ₱3,501 and above</label>
+        </div>
+
+        <div class="filter-group">
+          <h4>Status</h4>
+          <label><input type="checkbox" checked /> Available</label>
+        </div>
+      </aside>
+
+      <section class="results-panel">
+        <div class="results-header">
+          <div>
+            <h2>Available Lodges & Cottages</h2>
+            <p>Choose from our available resort accommodations.</p>
+          </div>
+
+          <div class="sort-box">
+            <label>Sort by:</label>
+            <select>
+              <option>Recommended</option>
+              <option>Lowest Price</option>
+              <option>Highest Price</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="featuredAccommodationList" class="property-list"></div>
+      </section>
+    </section>
+
+    <section class="account-area">
+      <div class="account-card" id="admin-login">
+        <h2>Login</h2>
+        <p class="small-text">Use your Admin, Staff, or Customer account.</p>
+
+        <input type="email" id="loginEmail" placeholder="Email" />
+        <input type="password" id="loginPassword" placeholder="Password" />
+
+        <button onclick="login()">Login</button>
+
+        <div class="demo-box">
+          <p><strong>Admin:</strong> admin@brealls.com / admin123</p>
+          <p><strong>Staff:</strong> staff@brealls.com / staff123</p>
+        </div>
+      </div>
+
+      <div class="account-card" id="book-now">
+        <h2>Create Customer Account</h2>
+        <p class="small-text">Register first before booking a stay.</p>
+
+        <input type="text" id="regName" placeholder="Full Name" />
+        <input type="email" id="regEmail" placeholder="Email" />
+        <input type="password" id="regPassword" placeholder="Password" />
+
+        <button onclick="register()">Register</button>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <h2>Contact Us</h2>
+
+      <div class="contact-grid">
+        <div class="contact-box">
+          <h4>Phone</h4>
+          <p>09XXXXXXXXX</p>
+        </div>
+
+        <div class="contact-box">
+          <h4>Email</h4>
+          <p>breallsresorts@gmail.com</p>
+        </div>
+
+        <div class="contact-box">
+          <h4>Location</h4>
+          <p>Brealls Resorts</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Brealls Resorts. All rights reserved.</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

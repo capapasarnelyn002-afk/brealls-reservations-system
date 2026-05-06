@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="dashboard-header">
+    <h1>Admin Dashboard</h1>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </header>
+
+  <section class="card">
+    <h2>Add Lodge or Cottage</h2>
+
+    <input type="text" id="accName" placeholder="Accommodation Name">
+
+    <select id="accType">
+      <option value="Lodge">Lodge</option>
+      <option value="Cottage">Cottage</option>
+    </select>
+
+    <input type="number" id="accCapacity" placeholder="Capacity">
+    <input type="number" id="accPrice" placeholder="Price">
+
+    <button class="main-button" onclick="addAccommodation()">Add Accommodation</button>
+  </section>
+
+  <section class="card">
+    <h2>All Lodges and Cottages</h2>
+    <div id="accommodationList"></div>
+  </section>
+
+  <section class="card">
+    <h2>All Bookings</h2>
+    <div id="bookingList"></div>
+  </section>
+
+  <section class="card">
+    <h2>Reports</h2>
+    <button class="main-button" onclick="loadReports()">Load Reports</button>
+    <div id="reportBox"></div>
+  </section>
+
+  <script src="js/app.js"></script>
+  <script>
+    loadAccommodations();
+    loadBookings();
+  </script>
+
+</body>
+</html>
